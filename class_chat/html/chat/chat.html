@@ -1,0 +1,140 @@
+<html>
+	<head>
+		<title>CFR虚拟国航聊天区</title>
+		<meta charset="UTF-8">
+		
+		
+		<link rel="shortcut icon" href="../../image/chat.ico" mce_href="//static.runoob.com/images/favicon.ico" type="image/x-icon" >
+		<style>	
+		
+		body
+		{
+		
+		background-color: lightblue;
+		}
+		.hide
+		{
+			display: none;
+			
+		}
+		#s
+		{
+			background-color:lightblue;
+		}
+		#showc
+		{
+			border:5px solid red;
+			/*width:905px;
+			height:505px;*/
+			text-align: center;
+			/*padding-left:60px;
+			border-radius: 9px;
+			padding-left:50%; margin-left:-450px;*/
+		}
+		
+		a.norm
+		{
+		background-color:yellow;
+		padding-left:0px;
+		}
+		a.check
+		{
+		background-color:red;
+		padding-left:0px;
+		}
+table, td, th
+{
+	border:1px solid yellow;
+}
+th
+{
+	background-color:red;
+	color:white;
+}
+body
+	{
+		text-align:center;
+	}
+	#showc
+	{
+	/*text-align:center;*/
+	
+	
+	}
+	#img2
+	{
+	margin-top:5px;
+	}
+<script>
+
+endl.onclick = function(){
+ var sp document.getelementBYid("")
+}
+</script>
+		</style>
+		<link rel="stylesheet" type="text/css" href="../../CSS/header.css">
+	</head>
+	<body>
+
+<table>
+<!--<tr>
+<th><a href="login.html">登录</a></th>
+<th><a href="new_login.html">加入我们</a></th>
+
+</tr>-->
+<header class="top">
+	
+
+  <img src="../../image/icon_ren.png" style="height: 30px; width: 30px; margin-top:8px;">
+  <span id="userid_" style="padding-top:8px;text-shadow: 0 0 4px black;">users</span><script>
+ window.onload=function() {
+var users = document.getElementById("userid_");
+users.innerHTML = localStorage["userid"];
+}
+//var symbit_ = document.getElementById("img2");
+function checkForm () {
+var  name_= document.getElementById("users");
+name_.value = localStorage["userid"];
+var symbit_1 = document.getElementById("saying");
+symbit_1.submit();
+}
+</script>
+  
+   </header>
+<nav>
+	<ul>
+		<li><a href="../../index.html">门户</a></li>
+		<li><a href="../../CFRCCAindex.php">首页</a></li>
+		<li><a href="">资源中心</a></li>
+		<li><a href="">飞行学院</a></li>
+		<li><a href="../../html/work/index.php">运控中心</a></li>
+		<li><a href="">原创插件</a></li>
+		<li><a href="">特长发挥</a></li>
+		<li><a href="free.html">员工休息室</a></li>
+		<li class="selected"><a href="../../html/chat/chat.html" >聊天</a></li>
+		<li><a href="">管理中心</a></li>
+	</ul>
+	</nav>
+</table>
+
+		
+		
+		<!--<p style="color: #009F95;">我是嵌入的HTML上面的标签</p>-->
+<iframe id="showc" src="chat_show.php #end" width="900px" height="500px" style=""></iframe>
+<!--<p style="color: #009F95;">我是嵌入的HTML下面的标签</p>-->
+		
+		
+		<form id="saying" action="chat_w.php" method="post" onsubmit='return checkForm()'>
+		<input id="users" class="hide" type="text" name="fname"  autofocus placeholder="呼号"><br>
+		<!--<button id="endl"></button>-->
+	<input id="s" type="text" name="says" style="width:900px;height:130px;font-size:15px;padding-left:60px;border-radius: 9px;" autofocus placeholder="说点什么吧~（换行请用<br>）">
+	<br><input id="img2" type="submit" value="提交" style="padding-top:5px;width:900px;height:40px;background-color:green;font-size:18px;border:none;">
+
+	</form>
+		
+
+	<p> 注：由于系统原因，10秒才会自动刷新，如有必要，请手动刷新</p>
+	
+	
+	</body>
+</html>
