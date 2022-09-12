@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script>
+	var I64BIT_TABLE =
+ 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-'.split('');
+ 
+function hash(input){
+ var hash = 5381;
+ var i = input.length - 1;
+ 
+ if(typeof input == 'string'){
+  for (; i > -1; i--)
+   hash += (hash << 5) + input.charCodeAt(i);
+ }
+ else{
+  for (; i > -1; i--)
+   hash += (hash << 5) + input[i];
+ }
+ var value = hash & 0x7FFFFFFF;
+ 
+ var retValue = '';
+ do{
+  retValue += I64BIT_TABLE[value & 0x3F];
+ }
+ while(value >>= 6);
+ 
+ return retValue;
+}</script>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Cloud</title>
@@ -85,10 +111,12 @@
   <p>
    <ul><h2 style="font-weight:500; font-size:2em">Our producs:</h2>
 	<li><a href="https://www.curseforge.com/minecraft/mc-mods/mineaircraft" class="main" style="font-weight:500; font-size:1.2em">MineCraft Mods</a></li>
-	<li><a href="" class="main" style="font-weight:500; font-size:1.2em">MineCraft Servers</a></li>
-	<li><a href="" class="main" style="font-weight:500; font-size:1.2em">MineCraft plugins</a></li>
-	<li><a href="" class="main" style="font-weight:500; font-size:1.2em">MineCraft Resource packs</a></li>
-	<li><a href="javascript:alert('This Meta is produced by Topaz Gigapixel AI!!!with no authorization!!!Just for fun!!!');window.location.href='a/AImeta++.zip'" class="main" style="font-weight:500; font-size:1.2em">MineCraft meta</a></li>
+	<li><a href="" class="main" style="font-weight:500; font-size:1.2em">MineCraft Servers(INOP)</a></li>
+	<li><a href="" class="main" style="font-weight:500; font-size:1.2em">MineCraft plugins(INOP)</a></li>
+	<li><a href="" class="main" style="font-weight:500; font-size:1.2em">MineCraft Resource packs(INOP)</a></li>
+	<li><a href="javascript:alert('This Meta is produced by Topaz Gigapixel AI!!!with no authorization!!!Just for fun!!!');window.location.href='a/AImeta++.zip;'" class="main" style="font-weight:500; font-size:1.2em">MineCraft meta</a></li>
+	<li><a href="javascript:if(hash(prompt('You are accessing private content. Please enter your password before continuing'))=='JB43pB')window.location.href='self/index.html';" class="main" style="font-weight:500; font-size:1.2em">Introduce</a></li>
+   
    </ul>
   </p>
 <body2>
