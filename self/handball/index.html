@@ -7,11 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link href="../fonts/fonts.css" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico" />
+  <script>
+	
+
+	window.onload=function (){
+		var alt = document.getElementById("alt");
+		alt.onclick=ac;
+		
+	}
+	function ac (){
+	//alert("fish");
+		alt.innerHTML="";
+	}
+  </script>
   <style>
     body,html{
 	margin:0px;
 	padding:0px;
 	height:100px;
+	background-color:gray;
 	}
 	#left{
 	background-color:gray;
@@ -22,25 +36,234 @@
 	}
 	#right{
 	background-color:lightblue;
-	margin-top:-100px;
+	
 	margin-left:10%;
 	padding:0px;
-	width:90%;
+	width:80%;
 	
 	}
 	div.com{
-	height:150px;
-	border-style:solid;
-    border-width:1px;
+	
+	border-style:dashed;
+    border-width:2px;
 	border-radius:10px;
-	padding-bottom:10px;
+	margin-bottom:10px;
+	}
+	div.comf{
+	
+	border-style:solid;
+    border-width:2px;
+	border-radius:10px;
+	margin-bottom:10px;
+	}
+	span.lo{
+		color:grey;
+	}
+	span.wn{
+		color:rgb(203, 173, 1);
 	}
   </style>
 </head>
 <body>
-	<div id="left"></div>
+<div>
+	<!--<div id="left"></div>-->
+	<!--  <iframe src="index1.html" style="position: absolute; width:100%;height:1000px;"></iframe>-->
+	<!--<div id="alt" href="javascript:alert(114514);" style="position:fixed; background-color:rgb(120, 182, 225);width:30%; margin-left:35%; margin-top:10%;">
+	<h1 style="text-align:center;border-bottom: 1px; border-bottom-style: solid; margin-left: 5%;margin-right: 5%;padding-bottom: 5%;">公告</h1>
+	</div>-->
 	<div id="right">
-		<div class="com"></div><div class="com"></div><div class="com"></div><div class="com"></div><div class="com"></div><div class="com"></div>
-	</div>
+		<div class="comf" style="border-color: brown;border-width:3px;"><h1 style="text-align: center; color:rgb(203, 173, 1);">参赛名单</h1><h2>
+			<ul style="margin-left:50px;">
+				<li>TeamA: C201601 C201615 C201618 王麦&#12288  C201629 于珩跃</li><br>
+				<li>TeamB: C201602 陈麓宇  C201608 孔扬 C201622 C201630</li><br>
+				<li>TeamC: C201613 C201614 C201626 轩若哲  C201628 姚天灏</li><br>
+			</ul></h2>
+		</div>
+		<div class="comf" style="border-color: red; border-width:5px;"><h1 style="text-align: center; color:red;">小组赛</h1>
+		
+		</div>
+		<div class="comf">
+		<h1 style="text-align:center;"><span class="lo"> 负 </span>C201608 &#12288孔扬 VS 肖尧岳 C201622<span class="wn"> 胜 </span></h1>
+		<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">10 11 10</span> 1 </span>  : <span style="color:red;"> 2 <span style="font-size:medium;">12 09 12</span> </h1>
+		<p style="text-align:center;">2022/11/8 11:30:00<br>
+		C2016 1st Competition<br>
+		teamB Table2</p>
+		</div>
+
+		<div class="comf">
+			<h1 style="text-align:center;"><span class="wn"> 胜 </span>C201601 蔡译宽 VS 任笑萱 C201615<span class="lo"> 负 </span></h1>
+			<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">13 09 11</span> 2 </span> : <span style="color:red;"> 1 <span style="font-size:medium;">09 11 11</span></span> </h1>
+			<p style="text-align:center;">2022/11/8 11:30:00<br>
+			C2016 1st Competition<br>
+			teamA Table1</p>
+			</div>  
+
+
+
+			<div class="comf">
+				<h1 style="text-align:center;"><span class="wn"> 胜 </span>C201618 &#12288王麦 VS 于珩跃 C201629<span class="lo"> 负 </span></h1>
+				<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">11 11</span> 2 </span>  : <span style="color:red;"> 0 <span style="font-size:medium;">08 08</span> </h1>
+				<p style="text-align:center;">2022/11/8 12:10:00<br>
+				C2016 1st Competition<br>
+				teamA Table1</p>
+				</div>
+		
+				<div class="comf">
+					<h1 style="text-align:center;"><span class="wn"> 胜 </span>C201608 &#12288孔扬 VS 张芳植 C201630<span class="lo"> 负 </span></h1>
+					<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">11 14</span> 2 </span> : <span style="color:red;"> 0 <span style="font-size:medium;">12 05</span></span> </h1>
+					<p style="text-align:center;">2022/11/8 12:10:00<br>
+					C2016 1st Competition<br>
+					teamB Table2</p>
+					</div>
+
+					<div class="comf">
+						<h1 style="text-align:center;"><span class="lo"> 负 </span>C201626 轩若哲 VS 姚天灏 C201628<span class="wn"> 胜 </span></h1>
+						<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">07 03</span> 0 </span> : <span style="color:red;"> 2 <span style="font-size:medium;">11 11</span></span> </h1>
+						<p style="text-align:center;">2022/11/8 12:10:00<br>
+						C2016 1st Competition<br>
+						teamC Table3</p>
+						</div>
+
+
+
+
+
+
+
+						<div class="comf">
+							<h1 style="text-align:center;"><span class="wn"> 胜 </span>C201602 陈麓宇 VS &#12288孔扬 C201608<span class="lo"> 负 </span></h1>
+							<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">12 11</span> 2 </span>  : <span style="color:red;"> 0 <span style="font-size:medium;">04 10</span> </h1>
+							<p style="text-align:center;">2022/11/9 11:30:00<br>
+							C2016 1st Competition<br>
+							teamB Table2</p>
+							</div>
+					
+							<div class="comf">
+								<h1 style="text-align:center;"><span class="lo"> 负 </span>C201601 蔡译宽 VS &#12288王麦 C201618<span class="wn"> 胜 </span></h1>
+								<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">09 04</span> 0 </span> : <span style="color:red;"> 2 <span style="font-size:medium;">11 11</span></span> </h1>
+								<p style="text-align:center;">2022/11/9 11:30:00<br>
+								C2016 1st Competition<br>
+								teamA Table1</p>
+								</div>
+
+								<div class="comf">
+									<h1 style="text-align:center;"><span class="lo"> 弃 </span>C201622 肖尧岳 VS 张芳植 C201630<span class="wn"> 胜 </span></h1>
+									<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">N/A</span> ? </span> : <span style="color:red;"> ? <span style="font-size:medium;">N/A</span></span> </h1>
+									<p style="text-align:center;">2022/11/9 11:30:00<br>
+									C2016 1st Competition<br>
+									teamB Table3</p>
+									</div>
+					
+					
+					
+								<div class="comf">
+									<h1 style="text-align:center;"><span class="lo"> 弃 </span>C201615 任笑萱 VS 于珩跃 C201629<span class="wn"> 胜 </span></h1>
+									<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">N/A</span> ? </span>  : <span style="color:red;"> ? <span style="font-size:medium;">N/A</span> </h1>
+									<p style="text-align:center;">2022/11/9 12:10:00<br>
+									C2016 1st Competition<br>
+									teamA Table1</p>
+									</div>
+							
+									<div class="comf">
+										<h1 style="text-align:center;"><span class="wn"> 胜 </span>C201602 陈麓宇 VS 张芳植 C201630<span class="lo"> 负 </span></h1>
+										<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">12 11</span> 2 </span> : <span style="color:red;"> 0 <span style="font-size:medium;">05 10</span></span> </h1>
+										<p style="text-align:center;">2022/11/9 12:10:00<br>
+										C2016 1st Competition<br>
+										teamB Table2</p>
+										</div>
+					
+										<div class="comf">
+											<h1 style="text-align:center;"><span class="lo"> 负 </span>C201614 邱昆藤 VS 姚天灏 C201628<span class="wn"> 胜 </span></h1>
+											<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">05 08</span> 0 </span> : <span style="color:red;"> 2 <span style="font-size:medium;">11 11</span></span> </h1>
+											<p style="text-align:center;">2022/11/9 12:10:00<br>
+											C2016 1st Competition<br>
+											teamC Table3</p>
+											</div>
+										
+											<div class="comf">
+												<h1 style="text-align:center;"><span class="lo"> 弃 </span>C201615 任笑萱 VS &#12288王麦 C201618<span class="wn"> 胜 </span></h1>
+												<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">N/A</span> ? </span>  : <span style="color:red;"> ? <span style="font-size:medium;">N/A</span> </h1>
+												<p style="text-align:center;">2022/11/9 12:40:00<br>
+												C2016 1st Competition<br>
+												teamA Table1</p>
+												</div>
+
+
+
+
+
+								<div class="com">
+							<h1 style="text-align:center;"><span class="lo"> 负 </span>C201601 蔡译宽 VS 于珩跃 C201629<span class="wn"> 胜 </span></h1>
+							<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">09 12</span> 0 </span>  : <span style="color:red;"> 2 <span style="font-size:medium;">11 14</span> </h1>
+							<p style="text-align:center;">2022/11/9 11:50:00<br>
+							C2016 1st Competition<br>
+							teamA Table1</p>
+							</div>
+					
+							<div class="comf">
+								<h1 style="text-align:center;"><span class="wn"> 胜 </span>C201602 陈麓宇 VS 肖尧岳 C201622<span class="lo"> 弃 </span></h1>
+								<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">N/A</span> ? </span> : <span style="color:red;"> ? <span style="font-size:medium;">N/A</span></span> </h1>
+								<p style="text-align:center;">2022/11/1 11:50:00<br>
+								C2016 1st Competition<br>
+								teamB Table2</p>
+								</div>
+
+								<div class="comf">
+									<h1 style="text-align:center;"><span class="lo"> 弃 </span>C201614 邱昆藤 VS 轩若哲 C201626<span class="wn"> 胜 </span></h1>
+									<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">N/A</span> ? </span> : <span style="color:red;"> ? <span style="font-size:medium;">N/A</span></span> </h1>
+									<p style="text-align:center;">2022/11/10 11:50:00<br>
+									C2016 1st Competition<br>
+									teamB Table3</p>
+									</div>
+					
+									
+								<div class="comf" style="border-color: brown;border-width:3px;"><h1 style="text-align: center; color:rgb(203, 173, 1);">晋级名单</h1><h2>
+									<ul style="margin-left:50px;">
+										<li>TeamA: C201618 王麦&#12288  C201629 于珩跃</li><br>
+										<li>TeamB: C201602 陈麓宇  C201608 孔扬</li><br>
+										<li>TeamC: C201626 轩若哲  C201628 姚天灏</li><br>
+									</ul></h2>
+								</div>
+								<div class="comf" style="border-color: red; border-width:5px;"><h1 style="text-align: center; color:red;">淘汰赛</h1></div>
+									<div class="comf">
+										<h1 style="text-align:center;"><span class="wn">(晋级) 胜 </span>C201602 陈麓宇 VS 轩若哲 C201626<span class="lo"> 负 (淘汰)</span></h1>
+										<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">11 12</span> 2 </span>  : <span style="color:red;"> 0 <span style="font-size:medium;">10 07</span> </h1>
+										<p style="text-align:center;">2022/11/10 12:10:00<br>
+										C2016 1st Competition<br>
+										Half-Final Table3</p>
+										</div>
+
+										
+									<div class="comf">
+										<h1 style="text-align:center;"><span class="wn">(晋级) 胜 </span>C201628 姚天灏 VS 于珩跃 C201629<span class="lo"> 负 (淘汰)</span></h1>
+										<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">11 11</span> 2 </span>  : <span style="color:red;"> 0 <span style="font-size:medium;">04 02</span> </h1>
+										<p style="text-align:center;">2022/11/10 12:10:00<br>
+										C2016 1st Competition<br>
+										Half-Final Table2</p>
+										</div>
+										<div class="comf">
+											<h1 style="text-align:center;"><span class="lo">(淘汰) 负 </span>C201608 &#12288孔扬 VS &#12288王麦 C201618<span class="wn"> 胜 (晋级)</span></h1>
+											<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">06 07</span> 0 </span>  : <span style="color:red;"> 2 <span style="font-size:medium;">11 11</span> </h1>
+											<p style="text-align:center;">2022/11/10 12:30:00<br>
+											C2016 1st Competition<br>
+											Half-Final Table2</p>
+											</div>
+											<div class="comf" style="border-color: brown;border-width:3px;"><h1 style="text-align: center; color:rgb(203, 173, 1);">决赛名单</h1><h2>
+												<ul style="margin-left:50px;">
+													<li> C201618 王麦</li><br>
+													<li> C201602 陈麓宇</li><br>
+													<li> C201628 姚天灏</li><br>
+												</ul></h2>
+											</div>
+											<div class="comf" style="border-color: red; border-width:5px;"><h1 style="text-align: center; color:red;">决赛</h1></div>
+											<div class="comf">
+												<h1 style="text-align:center;"><span class="lo"> 负 </span>C201602 陈麓宇 VS 姚天灏 C201628<span class="wn"> 胜 </span></h1>
+												<h1 style="text-align:center;"><span style="color:blue;"><span style="font-size:medium;">11 12 08</span> 1 </span> : <span style="color:red;"> 2 <span style="font-size:medium;">11 14 09</span></span> </h1>
+												<p style="text-align:center;">2022/11/11 12:00:00<br>
+												C2016 1st Competition<br>
+												Final Table2</p>
+												</div>
+								
+</div>										
 </body>
 </html>
