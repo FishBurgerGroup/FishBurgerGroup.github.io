@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UEG 550C OVERWRITE PROGRAM</title>
+    <link rel="stylesheet" href="./scripts/bootstrap.min.css" />
+    <link rel="stylesheet" href="./scripts/style.css" />
+    <script src="./scripts/jquery.js"></script>
+    <script src="./scripts/highcharts.js"></script>
+    <script>
+        var flag = $("#flag")
+
+
+        function addline(father,string){
+            $(father).append('<p class="line_p">'+string+"</p>");
+        }
+
+        function show_sir_flag(){
+            $("#flag").show();
+            $("#flag").css("display","flex");
+            $("#flag").addClass("flag_show");
+        }
+
+        
+        $(document).ready(function (){
+            
+            // $("")
+
+            // $("#div_win_3").click(function(){
+            //     alert("Clicked");
+            // });
+
+        setTimeout(() => {
+            show_sir_flag();
+            $("#div_win_3").css("z-index","0");
+            $(".wp2").css("color","lightgreen");
+        }, 54000);
+        $(".window").hide();
+        $("#flag").hide();
+        $("#div_win_1").delay(300).fadeIn();
+        // $("#div_win_1").html("")
+        $("#div_win_2").delay(600).fadeIn();
+        $("#div_win_3").delay(900).fadeIn();
+        setTimeout( function(){$(".wp2").html("操作系统：550C底层</br>版本:19.0.022.3<br>所有者：地球联合政府<br>\nCPU L1缓存:76GB<br>\n图形化显存:24TB<br>\nGPU 最大渲染能力:64x MSAA<br>\n已挂载设备:<br>\n地球联合政府 无人及控制系统<br>\n地球联合政府 敌我识别系统<br>\n地球联合政府 主动防御<br>\n地球联合政府 太空电梯控制");
+    },1000);
+        $("#flag").click(function(){$("#flag").hide()})
+
+        // var v3 = document.getElementById("vid_3");
+        // while (true){
+        //     var vid_progress = v3.currentTime / v3.duration;
+        //     if (vid_progress == 1){
+        //         show_sir_flag();
+        //         break;
+        //     }
+        // }
+        var chart = {
+      backgroundColor:"#0c0c0c",
+      type: 'spline',
+	  animation: Highcharts.svg, // don't animate in IE < IE 10.
+      marginRight: 10,
+	  events: {
+         load: function () {
+            // set up the updating of the chart each second
+            var series = this.series[0];
+            setInterval(function () {
+               var x = (new Date()).getTime(), // current time
+               y = Math.random();
+               series.addPoint([x, y], true, true);
+            }, 1000);
+         }
+      }
+   };
+   var title = {
+      text: '网络活动流量'   
+   };   
+   var xAxis = {
+      type: 'datetime',
+      tickPixelInterval: 150
+   };
+   var yAxis = {
+      title: {
+         text: '字节'
+      },
+      plotLines: [{
+         value: 0,
+         width: 1,
+         color: '#7fee90'
+      }]
+   };
+   var tooltip = {
+      formatter: function () {
+      return '<b>' + this.series.name + '</b><br/>' +
+         Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+         Highcharts.numberFormat(this.y, 2);
+      }
+   };
+   var plotOptions = {
+      area: {
+         pointStart: 1940,
+         marker: {
+            enabled: false,
+            symbol: 'circle',
+            radius: 2,
+            states: {
+               hover: {
+                 enabled: true
+               }
+            }
+         }
+      }
+   };
+   var legend = {
+      enabled: false
+   };
+   var exporting = {
+      enabled: false
+   };
+   var series= [{
+      name: 'IPv10',
+      data: (function () {
+         // generate an array of random data
+         var data = [],time = (new Date()).getTime(),i;
+         for (i = -19; i <= 0; i += 1) {
+            data.push({
+               x: time + i * 1000,
+               y: Math.random()
+            });
+         }
+         return data;
+      }()),
+      color:"#007F09"    
+   }];     
+      
+   var json = {};   
+   json.chart = chart; 
+   json.title = title;     
+   json.tooltip = tooltip;
+   json.xAxis = xAxis;
+   json.yAxis = yAxis; 
+   json.legend = legend;  
+   json.exporting = exporting;   
+   json.series = series;
+   json.plotOptions = plotOptions;
+   json.backgroundColor = "#0c0c0c"
+   
+   
+   Highcharts.setOptions({
+      global: {
+         useUTC: false
+      }
+   });
+//    Highcharts.chart('container',{backgroundColor:"#0c0c0c"},)
+    setTimeout(function(){$('#container').highcharts(json);},54000);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <p style="font-size:x-large;color:orange;height: 1em;">自编译系统</p>
+    </header>
+    <div id="index_bar" class="nav navbar-nav" style="font-size: large;height: 17px;">
+        <ul class="nav navbar-nav" style="height:17px;line-height: 17px;">
+            <li><a href="#">文件</a></li>
+            <li><a href="#">编辑</a></li>
+            <li><a href="#">预览</a></li>
+            <li><a href="#">项目</a></li>
+            <li><a href="#">构建</a></li>
+            <li><a href="#">调试</a></li>
+            <li><a href="#">组织</a></li>
+            <li><a href="#">工具</a></li>
+            <li><a href="#">测试</a></li>
+            <li class="activate"><a href="#">分析</a></li>
+            <li><a href="#">窗口</a></li>
+            <li><a href="#">帮助</a></li>
+        </ul>
+    </div>
+    <nav class="nav navbar-nav"> <!--HEADER BAR-->
+        <ul id="ul_nav">
+            <li class="dropdown nav navbar-nav" id="dd_select_li">
+
+                <li class="dropdown">
+                    <a href="#" class="btn dropdown-toggle" id="dd_select" data-toggle="dropdown">
+                        本地系统调试器
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">自编译</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="btn dropdown-toggle" id="dd_select" data-toggle="dropdown" style="width:4em;">
+                        自动
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">速度优先</a></li>
+                        <li><a href="#">进程优先</a></li>
+                        <li><a href="#">手动</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="btn dropdown-toggle" id="dd_select" data-toggle="dropdown" style="width:4em;">
+                        调试
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">终止</a></li>
+                        <li><a href="#">运行</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="btn dropdown-toggle" id="dd_select" data-toggle="dropdown" style="width:4em;">
+                        测试
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">---</a></li>
+                    </ul>
+                </li>
+
+                <!-- <a class="btn dropdown-toggle" id="dd_select" data-toggle="dropdown">LOCAL SYSTEM DEBUGGER</a> -->
+
+                <button class="btn nav_btn">网络</button>
+                <button class="btn nav_btn">节点</button>
+                <button class="btn nav_btn">日期</button>
+                <input type="search" placeholder="搜索" class="nav_search">
+                <button class="btn dropdown-toggle navbar-right" id="dd_select" data-toggle="dropdown" style="width:3em;">往前</button>
+                <button class="btn dropdown-toggle navbar-right" id="dd_select" data-toggle="dropdown" style="width:3em;">往后</button>
+            </li>
+            <!-- <li>
+                <p id="p_date">2037-4-16</p>
+            </li>
+            <li class="navbar-header">
+                <a id="p_infomation" class="navbar-brand" href="https://www.ueg.top">550C-2 UEG.ORG</a>
+            </li> -->
+        </ul>
+    </nav>
+    <div id="div_windowbg">
+        <div id="div_win_1" class="window">
+            <div class="win_titlebar">网络命令行
+                <button class="win_close_btn" onclick="$('#div_win_1').hide();">X</button>
+            </div>
+            <div class="win_page wp1" style="height: 100%;">
+                <div id="container" style="width: 100%; height: 100%; margin: 0"></div>
+            </div>
+        </div>
+        <div id="div_win_2" class="window">
+            <div class="win_titlebar">设备探测
+                <button class="win_close_btn" onclick="$('#div_win_2').hide();">X</button>
+            </div>
+            <div class="win_page wp2" style="text-align: center;font-size: large;"></div>
+        </div>
+        <div id="div_win_3" class="window">
+            <div class="win_titlebar">底层操作系统生成
+                <button class="win_close_btn" onclick="$('#div_win_3').hide();">X</button>
+            </div>
+            <div class="win_page wp3">
+                <video src="./media/div_win_3.mp4" id="vid_3" autoplay></video>
+            </div>
+        </div>
+    </div>
+    <div id="flag">
+        <p>
+        系统已覆写
+        </p>
+    </div>
+</body>
+</html>
